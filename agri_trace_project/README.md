@@ -1,5 +1,3 @@
-
-
 # 农产品溯源系统 - 部署与使用指南
 
 > **项目名称**：基于国密区块链的农产品溯源系统（以阿克苏苹果为例）
@@ -141,7 +139,7 @@ docker compose logs -f backend
 | 健康检查 | http://localhost:8080/health | 服务状态检查 |
 | 溯源查询（示例） | http://localhost/trace/BATCH-APPLE-20251025-001 | 无需登录 |
 
-**默认账号**（密码均为 `123456`，需先运行 init.sql 以实际mysql数据为准）：
+**默认账号**（密码均为 `123456`，需先运行 init.sql）：
 
 | 账号 | 角色 | 说明 |
 | :--- | :--- | :--- |
@@ -302,22 +300,6 @@ fmt.Println(string(hash))
 ```
 
 ---
-
-```
-frontend/src/views/login/LoginView.vue        ← 覆盖此文件
-frontend/src/views/trace/TracePublicView.vue  ← 覆盖此文件
-
-1. 纯前端溯源系统：https://github.com/sugar2026dev/agricultural-trace-systemgit  可以参考
-2. 电子证照(Fabric+IPFS)：https://gitee.com/surgar2022/fabric-eCert-trace-ipfs_ok  这个是目前go vue Fabric ipfs可以直接启动的 完整成功项目,但缺少国密，也不是阿克苏苹果溯源系统。
-3. 国密底层基础库：https://github.com/tjfoc/gmsm
-4. Fabric 国密改造版：https://github.com/ponyletter/fabric-gm  把这个当作你写好的，已经有的。 
-我的相关资料
-https://gitee.com/surgar2022/grad-proj-block-chain-agri_md
-```
-
-
-
-
 
 ## 技术参考
 
